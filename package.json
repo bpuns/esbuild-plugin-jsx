@@ -1,0 +1,22 @@
+{
+  "name": "esbuild-plugin-jsx",
+  "version": "1.0.0-beta4",
+  "type": "module",
+  "types": "index.d.ts",
+  "main": "index.js",
+  "description": "给esbuild用的vue3的jsx/tsx的解析插件",
+  "author": "bpuns",
+  "repository": "https://github.com/bpuns/esbuild-plugin-jsx",
+  "keywords": [
+    "esbuild",
+    "jsx",
+    "tsx",
+    "vue",
+    "vue3"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/plugin-syntax-typescript": "^7.23.3",
+    "@vue/babel-plugin-jsx": "^1.2.1"
+  }
+}
