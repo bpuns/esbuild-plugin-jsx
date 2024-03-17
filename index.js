@@ -20,12 +20,13 @@ export default (options) => {
           ],
           sourceFileName: args.path
         }
-        isTS(fileId) && transformOptions.plugins.push([ TS, { isTSX: true } ])
+        const _isTs = isTS(fileId)
+        _isTs && transformOptions.plugins.push([ TS, { isTSX: true } ])
         const result = transform(source, transformOptions)
         if (result?.code) {
           return {
             contents: result.code,
-            loader:   'js'
+            loader:   _isTs ? 'ts' : 'js'
           }
         }
       })
